@@ -90,45 +90,66 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative overflow-hidden mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-[var(--innara-surface)]">
-        <div className="text-center max-w-3xl mx-auto">
-          <p
-            className="inline-block text-xs tracking-wide uppercase text-[var(--innara-primary)] bg-[var(--innara-surface)] rounded-full px-3 py-1 mb-5 animate-fade-up border border-[var(--innara-primary)]"
-            style={{ animationDelay: "80ms" }}
-          >
-            New: Hormone-Smart Meal Planning App
-          </p>
-          <h1
-            className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-[linear-gradient(90deg,#7A69AF,#9B8BD1,#7A69AF)] bg-[length:200%_100%] animate-[shine_6s_linear_infinite] animate-fade-up"
-            style={{ animationDelay: "140ms" }}
-          >
-            Meal Prep with your Hormones in mind
-          </h1>
-          <p
-            className="mt-4 text-slate-600 animate-fade-up"
-            style={{ animationDelay: "200ms" }}
-          >
-            Innara helps you plan, prep, and balance meals that support hormonal
-            health — one week at a time. Science-backed nutrition tailored to
-            your unique cycle and goals.
-          </p>
-          <div
-            className="mt-8 flex items-center justify-center gap-3 animate-fade-up"
-            style={{ animationDelay: "260ms" }}
-          >
-            <a
-              href="#download"
-              className="inline-flex items-center justify-center rounded-2xl bg-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:brightness-90"
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          {/* Text column */}
+          <div className="text-center md:text-left max-w-3xl md:max-w-xl mx-auto md:mx-0">
+            <p
+              className="inline-block text-xs tracking-wide uppercase text-[var(--innara-primary)] bg-[var(--innara-surface)] rounded-full px-3 py-1 mb-5 animate-fade-up border border-[var(--innara-primary)]"
+              style={{ animationDelay: "80ms" }}
             >
-              Download the App 
-              <span className="ml-2">➜</span>
-            </a>
-            <a
-              href="#how"
-              className="inline-flex items-center justify-center rounded-2xl border border-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-[var(--innara-primary)] transition-colors hover:bg-[var(--innara-surface)]"
+              New: Hormone-Smart Meal Planning App
+            </p>
+            <h1
+              className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-[linear-gradient(90deg,#7A69AF,#9B8BD1,#7A69AF)] bg-[length:200%_100%] animate-[shine_6s_linear_infinite] animate-fade-up"
+              style={{ animationDelay: "140ms" }}
             >
-              See How It Works
-              <span className="ml-2">➜</span>
-            </a>
+              Meal Prep with your Hormones in mind
+            </h1>
+            <p
+              className="mt-4 text-slate-600 animate-fade-up"
+              style={{ animationDelay: "200ms" }}
+            >
+              Innara helps you plan, prep, and balance meals that support hormonal
+              health — one week at a time. Science-backed nutrition tailored to
+              your unique cycle and goals.
+            </p>
+            <div
+              className="mt-8 flex items-center justify-center md:justify-start gap-3 animate-fade-up"
+              style={{ animationDelay: "260ms" }}
+            >
+              <a
+                href="#download"
+                className="inline-flex items-center justify-center rounded-2xl bg-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:brightness-90"
+              >
+                Download the App 
+                <span className="ml-2">➜</span>
+              </a>
+              <a
+                href="#how"
+                className="inline-flex items-center justify-center rounded-2xl border border-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-[var(--innara-primary)] transition-colors hover:bg-[var(--innara-surface)]"
+              >
+                See How It Works
+                <span className="ml-2">➜</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Illustration column */}
+          <div className="flex justify-center md:justify-end">
+            <motion.div
+              aria-hidden="true"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="relative w-48 sm:w-56 md:w-72 lg:w-80 aspect-square"
+            >
+              <Image
+                src="/hippo-scooter.png"
+                alt="Hippo on a scooter illustration"
+                fill
+                className="object-contain drop-shadow-xl"
+                priority
+              />
+            </motion.div>
           </div>
         </div>
       </section>

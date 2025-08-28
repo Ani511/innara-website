@@ -1,6 +1,5 @@
 "use client";
-
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -18,20 +17,22 @@ const slideFrom = (dir) => ({
   },
 });
 
-const cardSpring = (dir) => ({
-  hidden: { opacity: 0, x: dir === "left" ? -100 : 100 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: { type: "spring", stiffness: 120, damping: 18 },
-  },
-});
+function ScrollProgress() {
+  const { scrollYProgress } = useScroll();
+  return (
+    <motion.div
+      style={{ scaleX: scrollYProgress, transformOrigin: "0 0" }}
+      className="fixed left-0 top-0 h-1 w-full bg-[var(--innara-primary)] z-50"
+    />
+  );
+}
 
 export default function Home() {
   const [hoveredStep, setHoveredStep] = useState(null);
   
   return (
     <div className="min-h-screen bg-white">
+      <ScrollProgress />
 
       {/* Navbar */}
       <header className="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-100">
@@ -64,8 +65,8 @@ export default function Home() {
               </a>
               <a className="hover:text-[var(--innara-primary)] link-underline" href="#blog">
                 Blog
-          </a>
-          <a
+              </a>
+              <a
                 className="hover:text-[var(--innara-primary)] link-underline"
                 href="#contact"
               >
@@ -87,7 +88,6 @@ export default function Home() {
         </div>
       </header>
 
-
       {/* Hero */}
       <section className="relative overflow-hidden mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-[var(--innara-surface)]">
         <div className="text-center max-w-3xl mx-auto">
@@ -98,7 +98,7 @@ export default function Home() {
             New: Hormone-Smart Meal Planning App
           </p>
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 animate-fade-up"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-[linear-gradient(90deg,#7A69AF,#9B8BD1,#7A69AF)] bg-[length:200%_100%] animate-[shine_6s_linear_infinite] animate-fade-up"
             style={{ animationDelay: "140ms" }}
           >
             Meal Prep with your Hormones in mind
@@ -121,8 +121,8 @@ export default function Home() {
             >
               Download the App 
               <span className="ml-2">➜</span>
-        </a>
-        <a
+            </a>
+            <a
               href="#how"
               className="inline-flex items-center justify-center rounded-2xl border border-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-[var(--innara-primary)] transition-colors hover:bg-[var(--innara-surface)]"
             >
@@ -162,8 +162,6 @@ export default function Home() {
         <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mt-12" />
       </section>
 
-
-
       {/* About */}
       <section
         id="about"
@@ -172,7 +170,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 50, opacity: 1 }}
+            whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
@@ -225,7 +223,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       {/* Features */}
       <section
@@ -291,21 +288,19 @@ export default function Home() {
               points: ["Group discussions", "Expert advice", "Safe, supportive space"],
             },
           ].map((f, i) => (
-            <div
-              key={i}
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md animate-fade-up"
-              style={{ animationDelay: `${i * 80}ms` }}
-            >
-              <div className="h-8 w-8 rounded-full bg-[#9999CC]/20 text-[#9999CC] grid place-content-center mb-4">
-                ★
+            <div key={i} className="group [perspective:800px] animate-fade-up" style={{ animationDelay: `${i * 80}ms` }}>
+              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-transform duration-300 group-hover:[transform:rotateX(6deg)_rotateY(-6deg)_translateY(-2px)] hover:shadow-md">
+                <div className="h-8 w-8 rounded-full bg-[#9999CC]/20 text-[#9999CC] grid place-content-center mb-4">
+                  ★
+                </div>
+                <h3 className="text-lg font-semibold">{f.title}</h3>
+                <p className="mt-2 text-sm text-slate-600">{f.desc}</p>
+                <ul className="mt-4 space-y-1 text-sm text-slate-600 list-disc pl-5">
+                  {f.points.map((p, j) => (
+                    <li key={j}>{p}</li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-lg font-semibold">{f.title}</h3>
-              <p className="mt-2 text-sm text-slate-600">{f.desc}</p>
-              <ul className="mt-4 space-y-1 text-sm text-slate-600 list-disc pl-5">
-                {f.points.map((p, j) => (
-                  <li key={j}>{p}</li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>
@@ -329,7 +324,7 @@ export default function Home() {
         <div className="hidden md:block">
           <div className="relative flex items-start justify-between">
             {/* Connector line across all steps */}
-            <div className="absolute top-7 left-50 right-50 h-[2px] bg-[var(--innara-primary)] z-0" />
+            <div className="absolute top-7 left-0 right-0 h-[2px] bg-[var(--innara-primary)] z-0" />
 
             {[
               { n: 1, t: "Tell Innara About You", bullets: ["Health profile", "Goals", "Preferences"] },
@@ -443,7 +438,7 @@ export default function Home() {
             ].map((item, i) => (
               <motion.article
                 key={i}
-                variants={cardSpring(i % 2 === 0 ? "left" : "right")}
+                variants={slideFrom(i % 2 === 0 ? "left" : "right")}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.25 }}
@@ -451,11 +446,13 @@ export default function Home() {
               >
                 {/* Image / Thumbnail */}
                 <div className="p-6 pb-0">
-                  <div className="aspect-video w-full rounded-xl overflow-hidden">
-                    <img
+                  <div className="aspect-video w-full rounded-xl overflow-hidden relative">
+                    <Image
                       src={item.img}
                       alt={item.title}
-                      className="h-full w-full object-cover"
+                      fill
+                      sizes="(max-width:768px) 100vw, (max-width:1200px) 33vw, 400px"
+                      className="object-cover transition-transform duration-300 hover:scale-105"
                     />
                   </div>
                 </div>

@@ -8,7 +8,7 @@ const fadeIn = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
-const slideFrom = (dir) => ({
+const slideFrom = (dir: "left" | "right") => ({
   hidden: { opacity: 0, x: dir === "left" ? -100 : 100 },
   show: {
     opacity: 1,
@@ -28,7 +28,7 @@ function ScrollProgress() {
 }
 
 export default function Home() {
-  const [hoveredStep, setHoveredStep] = useState(null);
+  const [hoveredStep, setHoveredStep] = useState<number | null>(null);
   
   return (
     <div className="min-h-screen bg-white">
@@ -45,7 +45,7 @@ export default function Home() {
               Innara
             </div>
             <nav
-              className="hidden md:flex items-center gap-6 text-sm text-slate-700 animate-fade-up"
+              className="hidden md:flex items-center gap-6 text-sm text-[#2E1A47] animate-fade-up"
               style={{ animationDelay: "120ms" }}
             >
               <a className="hover:text-[var(--innara-primary)] link-underline" href="#about">
@@ -88,7 +88,7 @@ export default function Home() {
         </div>
       </header>
 
-     {/* Hero */}
+      {/* Hero */}
       <section className="relative overflow-hidden mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-[var(--innara-surface)]">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* Text column */}
@@ -100,13 +100,13 @@ export default function Home() {
               New: Hormone-Smart Meal Planning App
             </p>
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-[linear-gradient(90deg,#7A69AF,#9B8BD1,#7A69AF)] bg-[length:200%_100%] animate-[shine_6s_linear_infinite] animate-fade-up"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-[linear-gradient(270deg,#9999CC,#ECECFF)] bg-[length:200%_100%] animate-[shine_6s_linear_infinite] animate-fade-up"
               style={{ animationDelay: "140ms" }}
             >
               Meal Prep with your Hormones in mind
             </h1>
             <p
-              className="mt-4 text-slate-600 animate-fade-up"
+              className="mt-4 text-[#2E1A47] animate-fade-up"
               style={{ animationDelay: "200ms" }}
             >
               Innara helps you plan, prep, and balance meals that support hormonal
@@ -124,13 +124,15 @@ export default function Home() {
                 Download the App 
                 <span className="ml-2">➜</span>
               </a>
-              <a
-                href="#how"
-                className="inline-flex items-center justify-center rounded-2xl border border-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-[var(--innara-primary)] transition-colors hover:bg-[var(--innara-surface)]"
+              <motion.a
+                href="#plans"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center justify-center rounded-2xl border border-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-[var(--innara-primary)] transition-colors hover:bg-[var(--innara-surface)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--innara-primary)]/40"
               >
                 See How It Works
                 <span className="ml-2">➜</span>
-              </a>
+              </motion.a>
             </div>
           </div>
 
@@ -174,10 +176,10 @@ export default function Home() {
                   className="object-contain"
                 />
               </div>
-              <div className="mt-6 text-xl sm:text-3xl font-bold text-slate-900">
+              <div className="mt-6 text-xl sm:text-3xl font-bold text-[#2E1A47]">
                 {item.title}
               </div>
-              <div className="mt-2 text-base text-slate-700">{item.subtitle}</div>
+              <div className="mt-2 text-base text-[#2E1A47]">{item.subtitle}</div>
             </div>
           ))}
         </div>
@@ -196,15 +198,15 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-[#2E1A47]">
               Why Innara? Your hormones deserve better
             </h2>
-            <p className="mt-4 text-slate-600">
+            <p className="mt-4 text-[#2E1A47]">
               Hormonal imbalances affect energy, mood, and metabolism. Traditional
               meal planning ignores these crucial signals. Innara aligns nutrition
               with your hormonal patterns.
             </p>
-            <ul className="mt-6 space-y-3 text-slate-700">
+            <ul className="mt-6 space-y-3 text-[#2E1A47]">
               <li className="flex items-start gap-3">
                 <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#7A69AF]"></span>
                 Personalized to your hormonal cycle
@@ -252,10 +254,10 @@ export default function Home() {
         className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20"
       >
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-semibold">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-[#2E1A47]">
             Features that support your journey
           </h2>
-          <p className="mt-3 text-slate-600">
+          <p className="mt-3 text-[#2E1A47]">
             Innara combines cutting-edge nutrition science with intuitive design
             to give you the tools you need for hormonal health success.
           </p>
@@ -315,9 +317,9 @@ export default function Home() {
                 <div className="h-8 w-8 rounded-full bg-[#9999CC]/20 text-[#9999CC] grid place-content-center mb-4">
                   ★
                 </div>
-                <h3 className="text-lg font-semibold">{f.title}</h3>
-                <p className="mt-2 text-sm text-slate-600">{f.desc}</p>
-                <ul className="mt-4 space-y-1 text-sm text-slate-600 list-disc pl-5">
+                <h3 className="text-lg font-semibold text-[#2E1A47]">{f.title}</h3>
+                <p className="mt-2 text-sm text-[#2E1A47]">{f.desc}</p>
+                <ul className="mt-4 space-y-1 text-sm text-[#2E1A47] list-disc pl-5">
                   {f.points.map((p, j) => (
                     <li key={j}>{p}</li>
                   ))}
@@ -366,8 +368,8 @@ export default function Home() {
                 {/* Card directly under circle */}
                 <div className="mt-6 w-full max-w-[220px] rounded-xl border border-slate-200 bg-white shadow-sm 
                                 p-4 transform transition-transform duration-300 hover:scale-105">
-                  <div className="font-semibold text-slate-900 text-center">{s.t}</div>
-                  <ul className="mt-2 text-sm text-slate-600 space-y-1 text-left">
+                  <div className="font-semibold text-[#2E1A47] text-center">{s.t}</div>
+                  <ul className="mt-2 text-sm text-[#2E1A47] space-y-1 text-left">
                     {s.bullets.map((b) => (
                       <li key={b}>• {b}</li>
                     ))}
@@ -393,9 +395,9 @@ export default function Home() {
                 <div className="h-10 w-10 rounded-full bg-[var(--innara-surface)] text-[var(--innara-primary)] grid place-content-center font-semibold">
                   {s.n}
                 </div>
-                <div className="font-semibold text-slate-900">{s.t}</div>
+                <div className="font-semibold text-[#2E1A47]">{s.t}</div>
               </div>
-              <ul className="mt-2 text-sm text-slate-600 space-y-1">
+              <ul className="mt-2 text-sm text-[#2E1A47] space-y-1">
                 {s.bullets.map((b) => (
                   <li key={b}>• {b}</li>
                 ))}
@@ -458,67 +460,68 @@ export default function Home() {
                 img: "/blog/blog-3.jpg",
               },
             ].map((item, i) => (
-              <motion.article
-                key={i}
-                variants={slideFrom(i % 2 === 0 ? "left" : "right")}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
-                className="rounded-2xl border border-slate-200 bg-white shadow-sm flex flex-col overflow-hidden"
-              >
-                {/* Image / Thumbnail */}
-                <div className="p-6 pb-0">
-                  <div className="aspect-video w-full rounded-xl overflow-hidden relative">
-                    <Image
-                      src={item.img}
-                      alt={item.title}
-                      fill
-                      sizes="(max-width:768px) 100vw, (max-width:1200px) 33vw, 400px"
-                      className="object-cover transition-transform duration-300 hover:scale-105"
-                    />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6 pt-4">
-                  <div className="flex items-center justify-between text-xs text-slate-500">
-                    <span className="inline-block rounded-full border border-[color:var(--innara-primary)] px-3 py-1 text-[color:var(--innara-primary)]">
-                      {item.tag}
-                    </span>
-                    <span>{item.time}</span>
-                  </div>
-                  <h3 className="mt-4 text-xl font-bold text-[var(--innara-footer)] leading-snug">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm text-slate-600">{item.excerpt}</p>
-                </div>
-
-                {/* Footer */}
-                <div className="px-6 pb-4">
-                  <div className="h-px w-full bg-slate-200 mb-3" />
-                  <div className="flex items-center justify-between text-[13px] text-slate-600 flex-wrap gap-2">
-                    <div className="flex items-center gap-2">
-                      <span className="inline-grid place-content-center h-5 w-5 rounded-full bg-slate-200">
-                        👤
-                      </span>
-                      <span>{item.author}</span>
+              <div key={i} className="group [perspective:800px]">
+                <motion.article
+                  variants={slideFrom(i % 2 === 0 ? "left" : "right")}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.25 }}
+                  className="rounded-2xl border border-slate-200 bg-white shadow-sm flex flex-col overflow-hidden transition-transform duration-300 group-hover:[transform:rotateX(6deg)_rotateY(-6deg)_translateY(-2px)] hover:shadow-md"
+                >
+                  {/* Image / Thumbnail */}
+                  <div className="p-6 pb-0">
+                    <div className="aspect-video w-full rounded-xl overflow-hidden relative">
+                      <Image
+                        src={item.img}
+                        alt={item.title}
+                        fill
+                        sizes="(max-width:768px) 100vw, (max-width:1200px) 33vw, 400px"
+                        className="object-cover transition-transform duration-300 hover:scale-105"
+                      />
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="inline-grid place-content-center h-5 w-5 rounded bg-slate-200">
-                        📅
-                      </span>
-                      <span>{item.date}</span>
-                    </div>
-                    <a
-                      className="group inline-flex items-center gap-1 text-slate-700 hover:text-[var(--innara-primary)]"
-                      href="#"
-                    >
-                      Read More
-                      <span className="transition-transform group-hover:translate-x-0.5">↗</span>
-                    </a>
                   </div>
-                </div>
-              </motion.article>
+
+                  {/* Content */}
+                  <div className="p-6 pt-4">
+                    <div className="flex items-center justify-between text-xs text-[#2E1A47]">
+                      <span className="inline-block rounded-full border border-[color:var(--innara-primary)] px-3 py-1 text-[#2E1A47]">
+                        {item.tag}
+                      </span>
+                      <span>{item.time}</span>
+                    </div>
+                    <h3 className="mt-4 text-xl font-bold text-[#2E1A47] leading-snug">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 text-sm text-[#2E1A47]">{item.excerpt}</p>
+                  </div>
+
+                  {/* Footer */}
+                  <div className="px-6 pb-4">
+                    <div className="h-px w-full bg-slate-200 mb-3" />
+                    <div className="flex items-center justify-between text-[13px] text-[#2E1A47] flex-wrap gap-2">
+                      <div className="flex items-center gap-2">
+                        <span className="inline-grid place-content-center h-5 w-5 rounded-full bg-slate-200">
+                          👤
+                        </span>
+                        <span>{item.author}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="inline-grid place-content-center h-5 w-5 rounded bg-slate-200">
+                          📅
+                        </span>
+                        <span>{item.date}</span>
+                      </div>
+                      <a
+                        className="group inline-flex items-center gap-1 text-[#2E1A47] hover:text-[var(--innara-primary)]"
+                        href="#"
+                      >
+                        Read More
+                        <span className="transition-transform group-hover:translate-x-0.5">↗</span>
+                      </a>
+                    </div>
+                  </div>
+                </motion.article>
+              </div>
             ))}
           </div>
 
@@ -543,7 +546,7 @@ export default function Home() {
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 className="text-lg font-semibold text-slate-900">Get Connected</h3>
+            <h3 className="text-lg font-semibold text-[#2E1A47]">Get Connected</h3>
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 { title: "Early Access", desc: "Be first to try new features", icon: "/icons/gift.png" },
@@ -563,23 +566,23 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                  <div className="mt-2 font-medium text-slate-900">{card.title}</div>
-                  <div className="text-sm text-slate-600">{card.desc}</div>
+                  <div className="mt-2 font-medium text-[#2E1A47]">{card.title}</div>
+                  <div className="text-sm text-[#2E1A47]">{card.desc}</div>
                 </div>
               ))}
             </div>
           </div>
           <form className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm grid grid-cols-1 gap-4">
             <div>
-              <label className="text-sm font-medium text-slate-700">Name</label>
+              <label className="text-sm font-medium text-[#2E1A47]">Name</label>
               <input className="mt-1 w-full rounded-xl border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[color:var(--innara-primary)]/30" placeholder="Your name" />
             </div>
             <div>
-              <label className="text-sm font-medium text-slate-700">Email</label>
+              <label className="text-sm font-medium text-[#2E1A47]">Email</label>
               <input type="email" className="mt-1 w-full rounded-xl border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[color:var(--innara-primary)]/30" placeholder="you@example.com" />
             </div>
             <div>
-              <label className="text-sm font-medium text-slate-700">I&apos;m interested in</label>
+              <label className="text-sm font-medium text-[#2E1A47]">I&apos;m interested in</label>
               <select className="mt-1 w-full rounded-xl border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[color:var(--innara-primary)]/30">
                 <option>Meal Planning</option>
                 <option>Nutrition Guides</option>

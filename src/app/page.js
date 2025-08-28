@@ -281,7 +281,7 @@ export default function Home() {
             },
             {
               title: "Nutrition Insights",
-              desc: "Get science-backed tips tailored to your cycle phase.",
+              desc: "Get personalized, science-backed tips designed for every phase of your cycle—so you can feel your best all month long",
               points: [
                 "Hormone-supportive foods",
                 "Easy swaps & hacks",

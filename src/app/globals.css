@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --innara-primary: #7A69AF; /* CTA buttons, highlighted text */
-  --innara-surface: #F0F0FF; /* light surface */
+  --innara-primary: #9999CC; /* CTA buttons, highlighted text */
+  --innara-surface: #ECECFF; /* light surface */
   --innara-footer: #2E1A47;  /* footer background */
 }
 

@@ -148,6 +148,7 @@ export default function Home() {
                 fill
                 className="object-contain drop-shadow-xl"
                 priority
+                quality={90}
               />
             </motion.div>
           </div>

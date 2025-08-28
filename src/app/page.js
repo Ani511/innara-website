@@ -148,6 +148,8 @@ export default function Home() {
                 fill
                 className="object-contain drop-shadow-xl"
                 priority
+                quality={90}
+                sizes="(max-width: 640px) 12rem, (max-width: 768px) 14rem, (max-width: 1024px) 18rem, 20rem"
               />
             </motion.div>
           </div>
@@ -239,6 +241,8 @@ export default function Home() {
                 fill
                 className="object-cover"
                 priority
+                quality={90}
+                sizes="(max-width: 640px) 16rem, (max-width: 768px) 18rem, (max-width: 1024px) 20rem, 22rem"
               />
             </div>
           </div>

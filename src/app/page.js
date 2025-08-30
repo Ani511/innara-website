@@ -89,8 +89,8 @@ export default function Home() {
       </header>
 
      {/* Hero */}
-      <section className="relative overflow-hidden mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-[var(--innara-surface)]">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+      <section className="relative overflow-hidden mx-auto w-full max-w-7xl p-[40px] sm:p-[60px] lg:p-[75px] py-8 sm:py-10 bg-[var(--innara-surface)]">
+        <div className="grid md:grid-cols-2 gap-6 items-center">
           {/* Text column */}
           <div className="text-center md:text-left max-w-3xl md:max-w-xl mx-auto md:mx-0">
             <p
@@ -143,7 +143,7 @@ export default function Home() {
               className="relative w-48 sm:w-56 md:w-72 lg:w-80 aspect-square"
             >
               <Image
-                src="/hippo-scooter.png"
+                src="/icons/hippo-scooter.png"
                 alt="Hippo on a scooter illustration"
                 fill
                 className="object-contain drop-shadow-xl"
@@ -187,9 +187,9 @@ export default function Home() {
       {/* About */}
       <section
         id="about"
-        className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20"
+        className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20"
       >
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-6 items-center">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -233,7 +233,7 @@ export default function Home() {
             </div>
           </motion.div>
           <div className="flex justify-center">
-            <div className="relative w-64 sm:w-72 md:w-80 aspect-[9/19] min-h-[500px] rounded-[2.5rem] border-8 border-slate-900/90 bg-slate-100 shadow-xl overflow-hidden">
+          <div className="relative w-36 sm:w-40 md:w-44 lg:w-48 aspect-[9/19] rounded-[1.5rem] border-4 border-slate-900/90 bg-slate-100 shadow-lg overflow-hidden">
               <Image
                 src="/app-mock.png"
                 alt="Innara app screen"
@@ -249,7 +249,7 @@ export default function Home() {
       {/* Features */}
       <section
         id="features"
-        className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20"
+        className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20"
       >
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-semibold">
@@ -311,17 +311,18 @@ export default function Home() {
             },
           ].map((f, i) => (
             <div key={i} className="group [perspective:800px] animate-fade-up" style={{ animationDelay: `${i * 80}ms` }}>
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-transform duration-300 group-hover:[transform:rotateX(6deg)_rotateY(-6deg)_translateY(-2px)] hover:shadow-md">
+              <div className="h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-transform duration-300 group-hover:[transform:rotateX(6deg)_rotateY(-6deg)_translateY(-2px)] hover:shadow-md flex flex-col">
                 <div className="h-8 w-8 rounded-full bg-[#9999CC]/20 text-[#9999CC] grid place-content-center mb-4">
                   ★
                 </div>
                 <h3 className="text-lg font-semibold">{f.title}</h3>
                 <p className="mt-2 text-sm text-slate-600">{f.desc}</p>
-                <ul className="mt-4 space-y-1 text-sm text-slate-600 list-disc pl-5">
+                <ul className="mt-4 space-y-1 text-sm text-slate-600 list-disc pl-5 flex-1">
                   {f.points.map((p, j) => (
                     <li key={j}>{p}</li>
                   ))}
                 </ul>
+                <div className="pt-2" />
               </div>
             </div>
           ))}
@@ -346,7 +347,7 @@ export default function Home() {
         <div className="hidden md:block">
           <div className="relative flex items-start justify-between">
             {/* Connector line across all steps */}
-            <div className="absolute top-7 left-0 right-0 h-[2px] bg-[var(--innara-primary)] z-0" />
+            <div className="absolute top-7 left-50 right-50 h-[2px] bg-[var(--innara-primary)] z-0" />
 
             {[
               { n: 1, t: "Tell Innara About You", bullets: ["Health profile", "Goals", "Preferences"] },
@@ -364,8 +365,8 @@ export default function Home() {
                 </motion.div>
 
                 {/* Card directly under circle */}
-                <div className="mt-6 w-full max-w-[220px] rounded-xl border border-slate-200 bg-white shadow-sm 
-                                p-4 transform transition-transform duration-300 hover:scale-105">
+                <div className="group [perspective:800px] mt-6 w-full max-w-[220px] rounded-xl border border-slate-200 bg-white shadow-sm 
+                                p-4 transform transition-transform duration-300 hover:scale-105 hover:[transform:rotateX(6deg)_rotateY(-6deg)_translateY(-2px)]">
                   <div className="font-semibold text-slate-900 text-center">{s.t}</div>
                   <ul className="mt-2 text-sm text-slate-600 space-y-1 text-left">
                     {s.bullets.map((b) => (
@@ -387,7 +388,7 @@ export default function Home() {
           ].map((s) => (
             <div
               key={s.n}
-              className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+              className="group [perspective:800px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-transform duration-300 hover:[transform:rotateX(6deg)_rotateY(-6deg)_translateY(-2px)]"
             >
               <div className="flex items-center gap-3">
                 <div className="h-10 w-10 rounded-full bg-[var(--innara-surface)] text-[var(--innara-primary)] grid place-content-center font-semibold">
@@ -407,7 +408,7 @@ export default function Home() {
 
       {/* Articles (Blog) */}
       <section id="blog" className="bg-[var(--innara-surface)]">
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20">
           <motion.div
             variants={fadeIn}
             initial="hidden"
@@ -464,7 +465,7 @@ export default function Home() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.25 }}
-                className="rounded-2xl border border-slate-200 bg-white shadow-sm flex flex-col overflow-hidden"
+                className="group [perspective:800px] rounded-2xl border border-slate-200 bg-white shadow-sm flex flex-col overflow-hidden"
               >
                 {/* Image / Thumbnail */}
                 <div className="p-6 pb-0">
@@ -474,13 +475,13 @@ export default function Home() {
                       alt={item.title}
                       fill
                       sizes="(max-width:768px) 100vw, (max-width:1200px) 33vw, 400px"
-                      className="object-cover transition-transform duration-300 hover:scale-105"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6 pt-4">
+                <div className="p-6 pt-4 transition-transform duration-300 group-hover:[transform:rotateX(6deg)_rotateY(-6deg)_translateY(-2px)]">
                   <div className="flex items-center justify-between text-xs text-slate-500">
                     <span className="inline-block rounded-full border border-[color:var(--innara-primary)] px-3 py-1 text-[color:var(--innara-primary)]">
                       {item.tag}
@@ -494,7 +495,7 @@ export default function Home() {
                 </div>
 
                 {/* Footer */}
-                <div className="px-6 pb-4">
+                <div className="px-6 pb-4 transition-transform duration-300 group-hover:[transform:rotateX(6deg)_rotateY(-6deg)_translateY(-2px)]">
                   <div className="h-px w-full bg-slate-200 mb-3" />
                   <div className="flex items-center justify-between text-[13px] text-slate-600 flex-wrap gap-2">
                     <div className="flex items-center gap-2">
@@ -536,7 +537,7 @@ export default function Home() {
       </section>
 
       {/* Community / Contact */}
-      <section id="contact" className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-[var(--innara-surface)]">
+      <section id="contact" className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20 bg-[var(--innara-surface)]">
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">Join the Innara Community</h2>
           <p className="mt-2 text-slate-600">Stay connected with the latest in hormone-friendly nutrition and app updates.</p>
@@ -673,4 +674,4 @@ export default function Home() {
       </footer>
     </div>
   );
-} } 
+} 

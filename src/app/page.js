@@ -89,7 +89,7 @@ export default function Home() {
       </header>
 
      {/* Hero */}
-      <section className="relative overflow-hidden mx-auto w-full max-w-7xl p-[40px] sm:p-[60px] lg:p-[75px] py-8 sm:py-10 bg-[var(--innara-surface)]">
+      <section className="relative overflow-hidden mx-auto w-full max-w-7xl p-[40px] sm:p-[60px] lg:p-[75px] py-8 sm:py-10 bg-gradient-to-l from-[var(--innara-surface)] to-white">
         <div className="grid md:grid-cols-2 gap-6 items-center">
           {/* Text column */}
           <div className="text-center md:text-left max-w-3xl md:max-w-xl mx-auto md:mx-0">
@@ -119,14 +119,15 @@ export default function Home() {
             >
               <a
                 href="#download"
-                className="inline-flex items-center justify-center rounded-2xl bg-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:brightness-90"
+                className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold shadow-sm transition-transform hover:-translate-y-0.5 hover:brightness-90"
+                style={{ backgroundColor: "#2E1A47", color: "#FFFFFF" }}
               >
                 Download the App 
                 <span className="ml-2">➜</span>
               </a>
               <a
-                href="#how"
-                className="inline-flex items-center justify-center rounded-2xl border border-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-[var(--innara-primary)] transition-colors hover:bg-[var(--innara-surface)]"
+                href="#plans"
+                className="inline-flex items-center justify-center rounded-2xl border border-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-[var(--innara-primary)] transition-all duration-200 hover:bg-[#9999CC] hover:text-white hover:border-[#9999CC] active:bg-[#9999CC] active:text-white active:border-[#9999CC]"
               >
                 See How It Works
                 <span className="ml-2">➜</span>
@@ -339,7 +340,7 @@ export default function Home() {
             How Innara Works for You
           </h2>
           <p className="mt-2 text-slate-600">
-            Getting started is easier than you think. Here’s how Innara guides you every step of the way.
+            Getting started is easier than you think. Here's how Innara guides you every step of the way.
           </p>
         </div>
 
@@ -443,7 +444,7 @@ export default function Home() {
                 time: "4 min read",
                 title: "The Science of Meal Timing for Better Energy",
                 excerpt:
-                  "Learn how syncing your meals with your body’s natural rhythms can curb cravings, stabilize mood, and supercharge your daily energy.",
+                  "Learn how syncing your meals with your body's natural rhythms can curb cravings, stabilize mood, and supercharge your daily energy.",
                 author: "Dr. Maya Lewis",
                 date: "July 18, 2024",
                 img: "/blog/blog-2.jpg",
@@ -595,83 +596,4 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[var(--innara-footer)] text-slate-200">
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          {/* Footer Columns */}
-          <div className="grid md:grid-cols-4 gap-10">
-            <div>
-              <div className="text-xl font-bold text-white">Innara</div>
-              <p className="mt-3 text-sm text-slate-300">
-                Empowering women to thrive through hormone-smart nutrition.
-              </p>
-            </div>
-            <div>
-              <div className="font-semibold text-white">App</div>
-              <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                <li>Features</li>
-                <li>How it Works</li>
-                <li>Pricing</li>
-                <li>Download</li>
-                <li>System Requirements</li>
-                <li>Release Notes</li>
-              </ul>
-            </div>
-            <div>
-              <div className="font-semibold text-white">Company</div>
-              <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                <li>About</li>
-                <li>Our Science</li>
-                <li>Healthcare Partners</li>
-                <li>Careers</li>
-                <li>Press Kit</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <div className="font-semibold text-white">Resources</div>
-              <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                <li>Blog</li>
-                <li>Nutrition Guides</li>
-                <li>Support Center</li>
-                <li>Privacy Policy</li>
-                <li>Terms of Service</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Bottom Row */}
-          <div className="mt-10 flex items-center justify-between flex-col sm:flex-row gap-4">
-            <p className="text-xs text-slate-400">
-              © {new Date().getFullYear()} Innara. All rights reserved.
-            </p>
-
-            {/* Social Icons */}
-            <div className="flex items-center gap-3">
-              {[
-                { name: "Instagram", icon: "/icons/instagram.png", link: "https://www.instagram.com/innara.ai/" },
-                { name: "Medium", icon: "/icons/medium.png", link: "https://medium.com/@innara.general" },
-                { name: "LinkedIn", icon: "/icons/linkedin.png", link: "https://www.linkedin.com/company/innara-ai/" },
-              ].map((social) => (
-                <a
-                  key={social.name}
-                  href={social.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="h-8 w-8 grid place-content-center rounded-full bg-[#1B0F2B] hover:bg-[#2C1B45] transition-colors"
-                >
-                  <Image
-                    src={social.icon}
-                    alt={social.name}
-                    width={20}
-                    height={20}
-                    className="object-contain"
-                  />
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-} 
+      <footer className="bg-

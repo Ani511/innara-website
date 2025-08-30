@@ -595,5 +595,84 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-
+       {/* Footer */}
+      <footer className="bg-[var(--innara-footer)] text-slate-200">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          {/* Footer Columns */}
+          <div className="grid md:grid-cols-4 gap-10">
+            <div>
+              <div className="text-xl font-bold text-white">Innara</div>
+              <p className="mt-3 text-sm text-slate-300">
+                Empowering women to thrive through hormone-smart nutrition.
+              </p>
+            </div>
+            <div>
+              <div className="font-semibold text-white">App</div>
+              <ul className="mt-3 space-y-2 text-sm text-slate-300">
+                <li>Features</li>
+                <li>How it Works</li>
+                <li>Pricing</li>
+                <li>Download</li>
+                <li>System Requirements</li>
+                <li>Release Notes</li>
+              </ul>
+            </div>
+            <div>
+              <div className="font-semibold text-white">Company</div>
+              <ul className="mt-3 space-y-2 text-sm text-slate-300">
+                <li>About</li>
+                <li>Our Science</li>
+                <li>Healthcare Partners</li>
+                <li>Careers</li>
+                <li>Press Kit</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+            <div>
+              <div className="font-semibold text-white">Resources</div>
+              <ul className="mt-3 space-y-2 text-sm text-slate-300">
+                <li>Blog</li>
+                <li>Nutrition Guides</li>
+                <li>Support Center</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom Row */}
+          <div className="mt-10 flex items-center justify-between flex-col sm:flex-row gap-4">
+            <p className="text-xs text-slate-400">
+              © {new Date().getFullYear()} Innara. All rights reserved.
+            </p>
+
+            {/* Social Icons */}
+            <div className="flex items-center gap-3">
+              {[
+                { name: "Instagram", icon: "/icons/instagram.png", link: "https://www.instagram.com/innara.ai/" },
+                { name: "Medium", icon: "/icons/medium.png", link: "https://medium.com/@innara.general" },
+                { name: "LinkedIn", icon: "/icons/linkedin.png", link: "https://www.linkedin.com/company/innara-ai/" },
+              ].map((social) => (
+                <a
+                  key={social.name}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-8 w-8 grid place-content-center rounded-full bg-[#1B0F2B] hover:bg-[#2C1B45] transition-colors"
+                >
+                  <Image
+                    src={social.icon}
+                    alt={social.name}
+                    width={20}
+                    height={20}
+                    className="object-contain"
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+} 

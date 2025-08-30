@@ -595,7 +595,7 @@ export default function Home() {
         </div>
       </section>
 
-       {/* Footer */}
+      {/* Footer */}
       <footer className="bg-[var(--innara-footer)] text-slate-200">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           {/* Footer Columns */}
@@ -675,4 +675,4 @@ export default function Home() {
       </footer>
     </div>
   );
-} 
+}

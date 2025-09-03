@@ -89,7 +89,7 @@ export default function Home() {
       </header>
 
      {/* Hero */}
-      <section className="relative overflow-hidden mx-auto w-full max-w-7xl p-[40px] sm:p-[60px] lg:p-[75px] py-8 sm:py-10 bg-gradient-to-l from-[var(--innara-surface)] to-white">
+      <section className="relative overflow-hidden mx-auto w-full max-w-7xl p-[40px] sm:p-[60px] lg:p-[75px] py-8 sm:py-10 bg-gradient-to-l from-[#CCCCFF] to-white">
         <div className="grid md:grid-cols-2 gap-6 items-center">
           {/* Text column */}
           <div className="text-center md:text-left max-w-3xl md:max-w-xl mx-auto md:mx-0">
@@ -250,7 +250,7 @@ export default function Home() {
       {/* Features */}
       <section
         id="features"
-        className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20"
+        className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20 bg-gradient-to-l from-[#FFFFFF] to-[#CCCCFF]"
       >
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-semibold">
@@ -407,138 +407,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Articles (Blog) */}
-      <section id="blog" className="bg-[var(--innara-surface)]">
-        <div className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20">
-          <motion.div
-            variants={fadeIn}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--innara-footer)]">
-              Make Our Kitchen Your Own
-            </h2>
-            <p className="mt-3 max-w-3xl mx-auto text-slate-700">
-              Dive into our collection of hormone-friendly recipes, nutrition insights, and meal
-              planning strategies. Everything you need to nourish your body and support your wellness
-              journey.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                tag: "Hormonal Health",
-                time: "6 min read",
-                title: "Balancing Hormones Naturally With Everyday Foods",
-                excerpt:
-                  "From flaxseeds to leafy greens, discover how simple food choices can help you feel more energized and balanced throughout your cycle.",
-                author: "Dr. Anika Rao",
-                date: "August 2, 2024",
-                img: "/blog/blog-1.jpg",
-              },
-              {
-                tag: "Nutrition Insights",
-                time: "4 min read",
-                title: "The Science of Meal Timing for Better Energy",
-                excerpt:
-                  "Learn how syncing your meals with your body&apos;s natural rhythms can curb cravings, stabilize mood, and supercharge your daily energy.",
-                author: "Dr. Maya Lewis",
-                date: "July 18, 2024",
-                img: "/blog/blog-2.jpg",
-              },
-              {
-                tag: "Wellness & Lifestyle",
-                time: "5 min read",
-                title: "Stress, Sleep & Hormones: The Hidden Connection",
-                excerpt:
-                  "Your bedtime routine may be the missing puzzle piece to balanced hormones. Explore simple strategies for restorative sleep.",
-                author: "Coach Daniel Kim",
-                date: "June 30, 2024",
-                img: "/blog/blog-3.jpg",
-              },
-            ].map((item, i) => (
-              <motion.article
-                key={i}
-                variants={slideFrom(i % 2 === 0 ? "left" : "right")}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
-                className="group [perspective:800px] rounded-2xl border border-slate-200 bg-white shadow-sm flex flex-col overflow-hidden"
-              >
-                {/* Image / Thumbnail */}
-                <div className="p-6 pb-0">
-                  <div className="aspect-video w-full rounded-xl overflow-hidden relative">
-            <Image
-                      src={item.img}
-                      alt={item.title}
-                      fill
-                      sizes="(max-width:768px) 100vw, (max-width:1200px) 33vw, 400px"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6 pt-4 transition-transform duration-300 group-hover:[transform:rotateX(6deg)_rotateY(-6deg)_translateY(-2px)]">
-                  <div className="flex items-center justify-between text-xs text-slate-500">
-                    <span className="inline-block rounded-full border border-[color:var(--innara-primary)] px-3 py-1 text-[color:var(--innara-primary)]">
-                      {item.tag}
-                    </span>
-                    <span>{item.time}</span>
-                  </div>
-                  <h3 className="mt-4 text-xl font-bold text-[var(--innara-footer)] leading-snug">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm text-slate-600">{item.excerpt}</p>
-                </div>
-
-                {/* Footer */}
-                <div className="px-6 pb-4 transition-transform duration-300 group-hover:[transform:rotateX(6deg)_rotateY(-6deg)_translateY(-2px)]">
-                  <div className="h-px w-full bg-slate-200 mb-3" />
-                  <div className="flex items-center justify-between text-[13px] text-slate-600 flex-wrap gap-2">
-                    <div className="flex items-center gap-2">
-                      <span className="inline-grid place-content-center h-5 w-5 rounded-full bg-slate-200">
-                        👤
-                      </span>
-                      <span>{item.author}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="inline-grid place-content-center h-5 w-5 rounded bg-slate-200">
-                        📅
-                      </span>
-                      <span>{item.date}</span>
-                    </div>
-                    <a
-                      className="group inline-flex items-center gap-1 text-slate-700 hover:text-[var(--innara-primary)]"
-                      href="#"
-                    >
-                      Read More
-                      <span className="transition-transform group-hover:translate-x-0.5">↗</span>
-          </a>
-        </div>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <div className="mt-10 text-center">
-            <a
-              href="#blog"
-              className="inline-flex items-center justify-center rounded-full bg-[var(--innara-primary)] text-white px-6 sm:px-8 py-3 text-sm font-semibold shadow-sm hover:brightness-90"
-            >
-              View all Articles
-              <span className="ml-2">➜</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
+         
       {/* Community / Contact */}
-      <section id="contact" className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20 bg-[var(--innara-surface)]">
+      <section id="contact" className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20 bg-gradient-to-l from-[#CCCCFF] to-white">
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">Join the Innara Community</h2>
           <p className="mt-2 text-slate-600">Stay connected with the latest in hormone-friendly nutrition and app updates.</p>

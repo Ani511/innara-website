@@ -155,7 +155,7 @@ export default function Home() {
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1440 320"
-    className="w-full h-[200px]"  // adjust 200px if you want more/less bleed
+    className="w-full h-[200px] rotate-180"  // adjust 200px if you want more/less bleed
     preserveAspectRatio="none"
   >
     <path

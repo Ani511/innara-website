@@ -151,16 +151,16 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
+        {/* Wave divider */}
+<div aria-hidden className="pointer-events-none absolute inset-x-0 -bottom-px overflow-hidden leading-none">
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1440 320"
-    className="w-full h-[200px] rotate-180"  // adjust 200px if you want more/less bleed
+    viewBox="0 0 1440 120"
     preserveAspectRatio="none"
+    className="block h-[80px] w-full sm:h-[120px]"
   >
     <path
-      fill="#ffffff" // 👈 next section background
-      d="M0,192L60,186.7C120,181,240,171,360,170.7C480,171,600,181,720,197.3C840,213,960,235,1080,234.7C1200,235,1320,213,1380,202.7L1440,192L1440,320L0,320Z"
+      d="M0,64L48,80C96,96,192,128,288,138.7C384,149,480,139,576,117.3C672,96,768,64,864,69.3C960,75,1056,117,1152,122.7C1248,128,1344,96,1392,80L1440,64L1440,0L0,0Z"
+      fill="#ffffff"  // match next section background
     />
   </svg>
 </div>

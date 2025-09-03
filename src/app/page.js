@@ -42,7 +42,7 @@ export default function Home() {
               className="text-xl font-bold text-[var(--innara-primary)] animate-fade-up"
               style={{ animationDelay: "50ms" }}
             >
-              Innara
+              Mealistik
             </div>
             <nav
               className="hidden md:flex items-center gap-6 text-sm text-slate-700 animate-fade-up"
@@ -106,7 +106,7 @@ export default function Home() {
               className="mt-4 text-slate-600 animate-fade-up"
               style={{ animationDelay: "200ms" }}
             >
-              Innara helps you plan, prep, and balance meals that support hormonal
+              Mealistik helps you plan, prep, and balance meals that support hormonal
               health, one week at a time. Science-backed nutrition tailored to
               your unique cycle and goals.
             </p>
@@ -194,7 +194,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">
-              Why Innara? Your hormones deserve better
+              Why Mealistik? Your hormones deserve better
             </h2>
             <p className="mt-4 text-slate-600">
               Hormonal imbalances affect energy, mood, and metabolism. Traditional
@@ -224,7 +224,7 @@ export default function Home() {
                 href="#features"
                 className="inline-flex items-center justify-center rounded-2xl border border-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-[var(--innara-primary)] transition-colors hover:bg-[var(--innara-surface)]"
               >
-                Learn More about Innara
+                Learn More about Mealistik
                 <span className="ml-2">➜</span>
               </a>
             </div>
@@ -253,7 +253,7 @@ export default function Home() {
             Features that support your journey
           </h2>
           <p className="mt-3 text-slate-600">
-            Innara combines cutting-edge nutrition science with intuitive design
+            Mealistik combines cutting-edge nutrition science with intuitive design
             to give you the tools you need for hormonal health success.
           </p>
         </div>
@@ -336,14 +336,14 @@ export default function Home() {
         <Image
         src="/icons/hippo-mascot.png" 
         alt="Innara Mascot"
-        width={120}   
-        height={120}
+        width={300}   
+        height={300}
         className="object-contain"
         />
         </div>
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">
-            How Innara Works for You
+            How Mealistik Works for You
           </h2>
           <p className="mt-2 text-slate-600">
             Getting started is easier than you think. Here&apos;s how Innara guides you every step of the way.
@@ -365,8 +365,8 @@ export default function Home() {
                 {/* Circle sits on the line, above it */}
                 <motion.div
                     whileHover={{ scale: 1.08 }}
-                    className="relative z-10 h-16 w-16 rounded-full bg-[#ECECFF] 
-                    grid place-content-center text-[#7A69AF] font-semibold shadow-sm"
+                    className="relative z-10 h-30 w-30 rounded-full bg-[#ECECFF] 
+                    grid place-content-center text-[#7A69AF] text-xl sm:text-2xl lg:text-3xl font-semibold shadow-sm"
                 >
                 {s.n}
                 </motion.div>
@@ -389,9 +389,9 @@ export default function Home() {
         {/* Mobile cards */}
         <div className="md:hidden space-y-6">
           {[
-            { n: 1, t: "Tell Innara About You", bullets: ["Health profile", "Goals", "Preferences"] },
-            { n: 2, t: "Get Your Smart Plan", bullets: ["Weekly plan", "Groceries", "Prep tips"] },
-            { n: 3, t: "Track & Adapt", bullets: ["Log progress", "Insights", "Adjust easily"] },
+            { n: 1, t: "Tell Innara About You", bullets: ["Share your health details so Mealistik knows your needs", "Set your personal health and fitness goals", "Tell us what foods and flavors you like"] },
+            { n: 2, t: "Get Your Smart Plan", bullets: ["Get a weekly meal plan made just for you", "See exactly what to shop for, stress-free", "Follow easy tips to cook and prep faster"] },
+            { n: 3, t: "Track & Adapt", bullets: ["Track your meals and progress with ease", "Get simple insights on what’s working for you", "Tweak your plan anytime to fit your life"] },
           ].map((s) => (
             <div
               key={s.n}
@@ -417,7 +417,7 @@ export default function Home() {
       {/* Community / Contact */}
       <section id="contact" className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20 bg-gradient-to-l from-[#CCCCFF] to-white">
         <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">Join the Innara Community</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">Join the Mealistik Community</h2>
           <p className="mt-2 text-slate-600">Stay connected with the latest in hormone-friendly nutrition and app updates.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
@@ -478,7 +478,7 @@ export default function Home() {
           {/* Footer Columns */}
           <div className="grid md:grid-cols-4 gap-10">
             <div>
-              <div className="text-xl font-bold text-white">Innara</div>
+              <div className="text-xl font-bold text-white">Mealistik</div>
               <p className="mt-3 text-sm text-slate-300">
                 Empowering women to thrive through hormone-smart nutrition.
               </p>

@@ -156,7 +156,7 @@ export default function Home() {
        <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
-          className="w-full h-[80px]"
+          className="w-full h-[160px]"
           preserveAspectRatio="none"
       >
       <path
@@ -371,9 +371,9 @@ export default function Home() {
             <div className="absolute top-7 left-50 right-50 h-[2px] bg-[var(--innara-primary)] z-0" />
 
             {[
-              { n: 1, t: "Tell Innara About You", bullets: ["Health profile", "Goals", "Preferences"] },
-              { n: 2, t: "Get Your Smart Plan", bullets: ["Weekly plan", "Groceries", "Prep tips"] },
-              { n: 3, t: "Track & Adapt", bullets: ["Log progress", "Insights", "Adjust easily"] },
+              { n: 1, t: "Tell Innara About You", bullets: ["Share your health details so Mealistik knows your needs.", "Set your personal health and fitness goals", "Tell us what foods and flavors you like"] },
+              { n: 2, t: "Get Your Smart Plan", bullets: ["Get a weekly meal plan made just for you.", "See exactly what to shop for, stress-free", "Follow easy tips to cook and prep faster"] },
+              { n: 3, t: "Track & Adapt", bullets: ["Track your meals and progress with ease", "Get simple AI assisted insights on what’s working for you", "Tweak your plan anytime to fit your life"] },
             ].map((s) => (
               <div key={s.n} className="flex-1 flex flex-col items-center">
                 {/* Circle sits on the line, above it */}

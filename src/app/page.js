@@ -63,9 +63,6 @@ export default function Home() {
               >
                 Plans
               </a>
-              <a className="hover:text-[var(--innara-primary)] link-underline" href="#blog">
-                Blog
-              </a>
               <a
                 className="hover:text-[var(--innara-primary)] link-underline"
                 href="#contact"
@@ -334,6 +331,16 @@ export default function Home() {
         id="plans"
         className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20"
       >
+        {/* Hippo mascot at top center */}
+        <div className="flex justify-center mb-8">
+        <Image
+        src="/icons/hippo-mascot.png" 
+        alt="Innara Mascot"
+        width={120}   
+        height={120}
+        className="object-contain"
+        />
+        </div>
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">
             How Innara Works for You
@@ -357,11 +364,11 @@ export default function Home() {
               <div key={s.n} className="flex-1 flex flex-col items-center">
                 {/* Circle sits on the line, above it */}
                 <motion.div
-                  whileHover={{ scale: 1.08 }}
-                  className="relative z-10 h-14 w-14 rounded-full bg-white border border-slate-200 
-                            grid place-content-center text-[var(--innara-primary)] font-semibold shadow-sm"
+                    whileHover={{ scale: 1.08 }}
+                    className="relative z-10 h-16 w-16 rounded-full bg-[#ECECFF] 
+                    grid place-content-center text-[#7A69AF] font-semibold shadow-sm"
                 >
-                  {s.n}
+                {s.n}
                 </motion.div>
 
                 {/* Card directly under circle */}

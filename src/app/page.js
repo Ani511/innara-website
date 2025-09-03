@@ -152,19 +152,19 @@ export default function Home() {
           </div>
         </div>
         {/* Wavy transition at bottom */}
-       <div className="absolute bottom-0 left-0 right-0">
-       <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          className="w-full h-[160px]"
-          preserveAspectRatio="none"
-      >
+  <div className="absolute bottom-0 left-0 right-0">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+      className="w-full h-[50px]"
+      preserveAspectRatio="none"
+    >
       <path
         fill="#ffffff"   /* next section’s background color */
         d="M0,128L48,133.3C96,139,192,149,288,176C384,203,480,245,576,245.3C672,245,768,203,864,197.3C960,192,1056,224,1152,218.7C1248,213,1344,171,1392,149.3L1440,128V320H0Z"
       />
-      </svg>
-     </div>
+    </svg>
+  </div>
       </section>
 
       {/* Stats / Metrics */}

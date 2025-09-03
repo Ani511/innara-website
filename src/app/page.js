@@ -156,7 +156,7 @@ export default function Home() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 320"
-      className="w-full h-[50px]"
+      className="w-full h-auto"
       preserveAspectRatio="none"
     >
       <path

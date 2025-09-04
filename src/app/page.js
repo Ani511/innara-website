@@ -97,11 +97,14 @@ export default function Home() {
           {/* Text column */}
           <div className="text-center md:text-left max-w-3xl md:max-w-xl mx-auto md:mx-0">
             <p
-              className="inline-block text-xs tracking-wide uppercase text-[var(--innara-primary)] bg-[var(--innara-surface)] rounded-full px-3 py-1 mb-5 animate-fade-up border border-[var(--innara-primary)]"
-              style={{ animationDelay: "80ms" }}
-            >
-              New: Hormone-Smart Meal Planning App
-            </p>
+              className="inline-block text-xs tracking-wide uppercase text-[#2E1A47] bg-[var(--innara-surface)] rounded-full px-3 py-1 mb-5 animate-fade-up border border-[var(--innara-primary)]"
+                 style={{ animationDelay: "80ms" }}
+                    >
+              <span className="bg-[#7A69AF] text-white px-2 py-0.5 rounded-full mr-1">
+                  New
+              </span>
+              Hormone-Smart Meal Planning App
+             </p>
             <h1
               className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-[linear-gradient(90deg,#7A69AF,#9B8BD1,#7A69AF)] bg-[length:200%_100%] animate-[shine_6s_linear_infinite] animate-fade-up"
               style={{ animationDelay: "140ms" }}
@@ -277,7 +280,7 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section id="features" className="relative bg-white px-6 lg:px-12 py-20">
+      <section id="features" className="relative bg-white px-6 lg:px-12 py-20 bg-gradient-to-l from-white to-[#CCCCFF]">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-semibold">
             Features that support your journey
@@ -458,7 +461,7 @@ export default function Home() {
       </section>
          
       {/* Community / Contact */}
-      <section id="contact" className="relative bg-[#ECECFF] px-6 lg:px-12 py-20">
+      <section id="contact" className="relative bg-[#ECECFF] px-6 lg:px-12 py-20 bg-gradient-to-l from-[#CCCCFF] to-white">
         {/* Wave at top (flipped from Features) */}
         <div className="absolute top-0 left-0 right-0 -translate-y-full rotate-180">
           <svg
@@ -513,14 +516,6 @@ export default function Home() {
             <div>
               <label className="text-sm font-medium text-slate-700">Email</label>
               <input type="email" className="mt-1 w-full rounded-xl border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[color:var(--innara-primary)]/30" placeholder="you@example.com" />
-            </div>
-            <div>
-              <label className="text-sm font-medium text-slate-700">I&apos;m interested in</label>
-              <select className="mt-1 w-full rounded-xl border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[color:var(--innara-primary)]/30">
-                <option>Meal Planning</option>
-                <option>Nutrition Guides</option>
-                <option>Community</option>
-              </select>
             </div>
             <div className="pt-2">
               <button className="inline-flex items-center justify-center rounded-2xl bg-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:brightness-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--innara-primary)]/40 w-full md:w-auto">Join Innara Community</button>

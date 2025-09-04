@@ -172,7 +172,8 @@ export default function Home() {
           </svg>
         </div>
       </section>
-      {/* About */}
+
+{/* About */}
       <section
         id="about"
         className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20"
@@ -234,35 +235,49 @@ export default function Home() {
         </div>
       </section>
 
-           {/* Stats / Metrics */}
+      {/* Stats */}
       <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-white">
-  <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mb-12" />
-  <div className="grid sm:grid-cols-3 gap-10 text-center">
-    {[
-      { title: "Free", subtitle: "7 day trial", icon: "/icons/hippo-gift.png", size: 112 },
-      { title: "24 hr", subtitle: "Set up Support", icon: "/icons/hippo-clock.png", size: 96 },
-      { title: "2x", subtitle: "Energy Increase", icon: "/icons/hippo-speed.png", size: 112 },
-    ].map((item) => (
-      <div key={item.title} className="flex flex-col items-center">
-        <Image
-          src={item.icon}
-          alt={item.title}
-          width={item.size}   
-          height={item.size}
-          className="object-contain"
-        />
-        <div className="mt-6 text-xl sm:text-3xl font-bold text-slate-900">
-          {item.title}
+        <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mb-12" />
+        <div className="grid sm:grid-cols-3 gap-10 text-center">
+          {[
+            {
+              title: "Free",
+              subtitle: "7 day trial",
+              icon: "/icons/hippo-gift.png",
+            },
+            {
+              title: "24 hr",
+              subtitle: "Set up Support",
+              icon: "/icons/hippo-clock.png",
+            },
+            {
+              title: "2x",
+              subtitle: "Energy Increase",
+              icon: "/icons/hippo-speed.png",
+            },
+          ].map((item) => (
+            <div key={item.title} className="flex flex-col items-center">
+              <Image
+                src={item.icon}
+                alt={item.title}
+                width={96}
+                height={96}
+                className="object-contain"
+              />
+              <div className="mt-6 text-xl sm:text-3xl font-bold text-slate-900">
+                {item.title}
+              </div>
+              <div className="mt-2 text-base text-slate-700">
+                {item.subtitle}
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="mt-2 text-base text-slate-700">{item.subtitle}</div>
-      </div>
-    ))}
-  </div>
-       <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mb-12" />
-</section>
+        <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mt-12" />
+      </section>
 
-     {/* Features */}
-      <section id="features" className="relative bg-white px-6 lg:px-12 py-20 bg-gradient-to-l from-white to-[#CCCCFF]">
+      {/* Features */}
+      <section id="features" className="relative bg-white px-6 lg:px-12 py-20 bg-gradient-to-l from-[#CCCCFF] to-white">">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-semibold">
             Features that support your journey
@@ -354,6 +369,7 @@ export default function Home() {
           </svg>
         </div>
       </section>
+
       {/* Timeline */}
       <section
         id="plans"
@@ -403,7 +419,7 @@ export default function Home() {
                 <div className="group [perspective:800px] mt-6 w-full max-w-[220px] rounded-xl border border-slate-200 bg-white shadow-sm 
                                 p-4 transform transition-transform duration-300 hover:scale-105 hover:[transform:rotateX(6deg)_rotateY(-6deg)_translateY(-2px)]">
                   <div className="font-semibold text-slate-900 text-center">{s.t}</div>
-                  <ul className="mt-2 text-sm text-slate-600 space-y-1 text-left">
+                  <ul className="mt-2 text-l text-slate-600 space-y-2 text-left">
                     {s.bullets.map((b) => (
                       <li key={b}>• {b}</li>
                     ))}
@@ -439,24 +455,24 @@ export default function Home() {
             </div>
           ))}
         </div>
-            <div className="absolute bottom-0 left-0 right-0">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1440 320"
-    className="w-full h-[60px]"
-    preserveAspectRatio="none"
-  >
-    <path
-      fill="#FFFFFF"  // next section background color
-      d="M0,96L48,101.3C96,107,192,117,288,133.3C384,149,480,171,576,181.3C672,192,768,192,864,170.7C960,149,1056,107,1152,90.7C1248,75,1344,85,1392,90.7L1440,96L1440,0L0,0Z"
-    />
-  </svg>
-</div>
       </section>
-
          
       {/* Community / Contact */}
       <section id="contact" className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20 bg-gradient-to-l from-[#CCCCFF] to-white">
+        {/* Wave at top (flipped from Features) */}
+        <div className="absolute top-0 left-0 right-0 -translate-y-full rotate-180">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            className="w-full h-32 text-[#ECECFF]"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,0L0,0Z"
+            />
+          </svg>
+        </div>
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">Join the Mealistik Community</h2>
           <p className="mt-2 text-slate-600">Stay connected with the latest in hormone-friendly nutrition and app updates.</p>
@@ -502,6 +518,20 @@ export default function Home() {
               <button className="inline-flex items-center justify-center rounded-2xl bg-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:brightness-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--innara-primary)]/40 w-full md:w-auto">Join Innara Community</button>
             </div>
           </form>
+        </div>
+        {/* Wave divider at bottom (into footer bg) */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            className="w-full h-32 text-[#2E1A47]"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,64L48,80C96,96,192,128,288,149.3C384,171,480,181,576,176C672,171,768,149,864,154.7C960,160,1056,192,1152,213.3C1248,235,1344,245,1392,250.7L1440,256V320H0Z"
+            />
+          </svg>
         </div>
       </section>
 

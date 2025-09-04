@@ -97,11 +97,14 @@ export default function Home() {
           {/* Text column */}
           <div className="text-center md:text-left max-w-3xl md:max-w-xl mx-auto md:mx-0">
             <p
-              className="inline-block text-xs tracking-wide uppercase text-[var(--innara-primary)] bg-[var(--innara-surface)] rounded-full px-3 py-1 mb-5 animate-fade-up border border-[var(--innara-primary)]"
-              style={{ animationDelay: "80ms" }}
-            >
-              New: Hormone-Smart Meal Planning App
-            </p>
+              className="inline-block text-xs tracking-wide uppercase text-[#2E1A47] bg-[var(--innara-surface)] rounded-full px-3 py-1 mb-5 animate-fade-up border border-[var(--innara-primary)]"
+                 style={{ animationDelay: "80ms" }}
+                    >
+              <span className="bg-[#7A69AF] text-white px-2 py-0.5 rounded-full mr-1">
+                  New
+              </span>
+              Hormone-Smart Meal Planning App
+             </p>
             <h1
               className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-[linear-gradient(90deg,#7A69AF,#9B8BD1,#7A69AF)] bg-[length:200%_100%] animate-[shine_6s_linear_infinite] animate-fade-up"
               style={{ animationDelay: "140ms" }}
@@ -172,7 +175,6 @@ export default function Home() {
           </svg>
         </div>
       </section>
-
  {/* About */}
       <section
         id="about"
@@ -276,29 +278,9 @@ export default function Home() {
         <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mt-12" />
       </section>
 
+     
       {/* Features */}
       <section id="features" className="relative bg-white px-6 lg:px-12 py-20 bg-gradient-to-l from-white to-[#CCCCFF]">
-        {/* Wave at top (flipped from Features) */}
-        <div className="absolute top-0 left-0 right-0 -translate-y-full rotate-180">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-            className="w-full h-20 text-[#ECECFF]"
-            preserveAspectRatio="none"
-          >
-          <defs>
-      <linearGradient id="waveGradientFeaturesTop" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="#CCCCFF" />
-        <stop offset="100%" stopColor="#FFFFFF" />
-      </linearGradient>
-    </defs>
-    <path
-      fill="url(#waveGradientFeaturesTop)"
-      d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,0L0,0Z"
-    />
-  </svg>
-            
-        </div>
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-semibold">
             Features that support your journey
@@ -375,28 +357,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        {/* Wave divider at bottom (into Contact bg) */}
-        
-<div className="absolute bottom-0 left-0 right-0 rotate-180">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1440 320"
-    className="w-full h-32"
-    preserveAspectRatio="none"
-  >
-    <defs>
-      <linearGradient id="waveGradientFeaturesBottom" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="#FFFFFF" />
-        <stop offset="100%" stopColor="#CCCCFF" />
-      </linearGradient>
-    </defs>
-    <path
-      fill="url(#waveGradientFeaturesBottom)"
-      d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L0,320Z"
-    />
-  </svg>
-</div>
-
+      </section>
 
       {/* Timeline */}
       <section
@@ -492,21 +453,14 @@ export default function Home() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 320"
-            className="w-full h-20 text-[#ECECFF]"
+            className="w-full h-32 text-[#ECECFF]"
             preserveAspectRatio="none"
           >
-          <defs>
-      <linearGradient id="waveGradientContactTop" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="#CCCCFF" />
-        <stop offset="100%" stopColor="#FFFFFF" />
-      </linearGradient>
-    </defs>
-    <path
-      fill="url(#waveGradientContactTop)"
-      d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,0L0,0Z"
-    />
-  </svg>
-            
+            <path
+              fill="currentColor"
+              d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,0L0,0Z"
+            />
+          </svg>
         </div>
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">Join the Mealistik Community</h2>
@@ -549,21 +503,12 @@ export default function Home() {
               <label className="text-sm font-medium text-slate-700">Email</label>
               <input type="email" className="mt-1 w-full rounded-xl border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[color:var(--innara-primary)]/30" placeholder="you@example.com" />
             </div>
-            <div>
-              <label className="text-sm font-medium text-slate-700">I&apos;m interested in</label>
-              <select className="mt-1 w-full rounded-xl border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[color:var(--innara-primary)]/30">
-                <option>Meal Planning</option>
-                <option>Nutrition Guides</option>
-                <option>Community</option>
-              </select>
-            </div>
             <div className="pt-2">
               <button className="inline-flex items-center justify-center rounded-2xl bg-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:brightness-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--innara-primary)]/40 w-full md:w-auto">Join Innara Community</button>
             </div>
           </form>
         </div>
-      </section>
-
+        {/* Wave divider at bottom (into footer bg) */}
       {/* Footer */}
       <footer className="bg-[var(--innara-footer)] text-slate-200">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

@@ -173,48 +173,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-white">
-        <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mb-12" />
-        <div className="grid sm:grid-cols-3 gap-10 text-center">
-          {[
-            {
-              title: "Free",
-              subtitle: "7 day trial",
-              icon: "/icons/hippo-gift.png",
-            },
-            {
-              title: "24 hr",
-              subtitle: "Set up Support",
-              icon: "/icons/hippo-clock.png",
-            },
-            {
-              title: "2x",
-              subtitle: "Energy Increase",
-              icon: "/icons/hippo-speed.png",
-            },
-          ].map((item) => (
-            <div key={item.title} className="flex flex-col items-center">
-              <Image
-                src={item.icon}
-                alt={item.title}
-                width={96}
-                height={96}
-                className="object-contain"
-              />
-              <div className="mt-6 text-xl sm:text-3xl font-bold text-slate-900">
-                {item.title}
-              </div>
-              <div className="mt-2 text-base text-slate-700">
-                {item.subtitle}
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mt-12" />
-      </section>
-
-      {/* About */}
+ {/* About */}
       <section
         id="about"
         className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20"
@@ -276,8 +235,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Stats */}
+      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-white">
+        <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mb-12" />
+        <div className="grid sm:grid-cols-3 gap-10 text-center">
+          {[
+            {
+              title: "Free",
+              subtitle: "7 day trial",
+              icon: "/icons/hippo-gift.png",
+            },
+            {
+              title: "24 hr",
+              subtitle: "Set up Support",
+              icon: "/icons/hippo-clock.png",
+            },
+            {
+              title: "2x",
+              subtitle: "Energy Increase",
+              icon: "/icons/hippo-speed.png",
+            },
+          ].map((item) => (
+            <div key={item.title} className="flex flex-col items-center">
+              <Image
+                src={item.icon}
+                alt={item.title}
+                width={96}
+                height={96}
+                className="object-contain"
+              />
+              <div className="mt-6 text-xl sm:text-3xl font-bold text-slate-900">
+                {item.title}
+              </div>
+              <div className="mt-2 text-base text-slate-700">
+                {item.subtitle}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mt-12" />
+      </section>
+
       {/* Features */}
-      <section id="features" className="relative bg-white px-6 lg:px-12 py-20">
+      <section id="features" className="relative bg-white px-6 lg:px-12 py-20 bg-gradient-to-l from-white to-[#CCCCFF]">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-semibold">
             Features that support your journey
@@ -458,7 +458,7 @@ export default function Home() {
       </section>
          
       {/* Community / Contact */}
-      <section id="contact" className="relative bg-[#ECECFF] px-6 lg:px-12 py-20">
+      <section id="contact" className="relative bg-[#ECECFF] px-6 lg:px-12 py-20 bg-gradient-to-l from-[#CCCCFF] to-white">
         {/* Wave at top (flipped from Features) */}
         <div className="absolute top-0 left-0 right-0 -translate-y-full rotate-180">
           <svg

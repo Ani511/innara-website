@@ -151,6 +151,19 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 right-0">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+    className="w-full h-[150px]"
+    preserveAspectRatio="none"
+  >
+    <path
+      fill="#FFFFFF"  // next section background color
+      d="M0,96L48,101.3C96,107,192,117,288,133.3C384,149,480,171,576,181.3C672,192,768,192,864,170.7C960,149,1056,107,1152,90.7C1248,75,1344,85,1392,90.7L1440,96L1440,0L0,0Z"
+    />
+  </svg>
+</div>
      </section>
 
       {/* About */}

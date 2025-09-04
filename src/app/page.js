@@ -287,13 +287,13 @@ export default function Home() {
             preserveAspectRatio="none"
           >
           <defs>
-      <linearGradient id="waveGradientTop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <linearGradient id="waveGradientFeaturesTop" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stopColor="#CCCCFF" />
         <stop offset="100%" stopColor="#FFFFFF" />
       </linearGradient>
     </defs>
     <path
-      fill="url(#waveGradientTop)"
+      fill="url(#waveGradientFeaturesTop)"
       d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,0L0,0Z"
     />
   </svg>
@@ -385,13 +385,13 @@ export default function Home() {
     preserveAspectRatio="none"
   >
     <defs>
-      <linearGradient id="waveGradientBottom" x1="0%" y1="0%" x2="100%" y2="0%">
+      <linearGradient id="waveGradientFeaturesBottom" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stopColor="#FFFFFF" />
         <stop offset="100%" stopColor="#CCCCFF" />
       </linearGradient>
     </defs>
     <path
-      fill="url(#waveGradientBottom)"
+      fill="url(#waveGradientFeaturesBottom)"
       d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L0,320Z"
     />
   </svg>
@@ -496,13 +496,13 @@ export default function Home() {
             preserveAspectRatio="none"
           >
           <defs>
-      <linearGradient id="waveGradientTop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <linearGradient id="waveGradientContactTop" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stopColor="#CCCCFF" />
         <stop offset="100%" stopColor="#FFFFFF" />
       </linearGradient>
     </defs>
     <path
-      fill="url(#waveGradientTop)"
+      fill="url(#waveGradientContactTop)"
       d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,0L0,0Z"
     />
   </svg>

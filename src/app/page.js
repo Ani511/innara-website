@@ -3,11 +3,13 @@ import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
+// Variants for fade-in
 const fadeIn = {
   hidden: { opacity: 0, y: 16 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
+// Variants for slide-in from left/right
 const slideFrom = (dir) => ({
   hidden: { opacity: 0, x: dir === "left" ? -100 : 100 },
   show: {
@@ -17,6 +19,7 @@ const slideFrom = (dir) => ({
   },
 });
 
+// Scroll progress bar at the top
 function ScrollProgress() {
   const { scrollYProgress } = useScroll();
   return (
@@ -29,7 +32,7 @@ function ScrollProgress() {
 
 export default function Home() {
   const [hoveredStep, setHoveredStep] = useState(null);
-  
+
   return (
     <div className="min-h-screen bg-white">
       <ScrollProgress />
@@ -48,7 +51,10 @@ export default function Home() {
               className="hidden md:flex items-center gap-6 text-sm text-slate-700 animate-fade-up"
               style={{ animationDelay: "120ms" }}
             >
-              <a className="hover:text-[var(--innara-primary)] link-underline" href="#about">
+              <a
+                className="hover:text-[var(--innara-primary)] link-underline"
+                href="#about"
+              >
                 About
               </a>
               <a
@@ -85,20 +91,17 @@ export default function Home() {
         </div>
       </header>
 
-     {/* Hero */}
+      {/* Hero */}
       <section className="relative overflow-hidden mx-auto w-full max-w-7xl p-[40px] sm:p-[60px] lg:p-[75px] py-8 sm:py-10 bg-gradient-to-l from-[#CCCCFF] to-white">
         <div className="grid md:grid-cols-2 gap-6 items-center">
           {/* Text column */}
           <div className="text-center md:text-left max-w-3xl md:max-w-xl mx-auto md:mx-0">
             <p
-  className="inline-block text-xs tracking-wide uppercase text-[#2E1A47] bg-[var(--innara-surface)] rounded-full px-3 py-1 mb-5 animate-fade-up border border-[var(--innara-primary)]"
-  style={{ animationDelay: "80ms" }}
->
-  <span className="bg-[#7A69AF] text-white px-2 py-0.5 rounded-full mr-1">
-    New
-  </span>
-  : Hormone-Smart Meal Planning App
-</p>
+              className="inline-block text-xs tracking-wide uppercase text-[var(--innara-primary)] bg-[var(--innara-surface)] rounded-full px-3 py-1 mb-5 animate-fade-up border border-[var(--innara-primary)]"
+              style={{ animationDelay: "80ms" }}
+            >
+              New: Hormone-Smart Meal Planning App
+            </p>
             <h1
               className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-[linear-gradient(90deg,#7A69AF,#9B8BD1,#7A69AF)] bg-[length:200%_100%] animate-[shine_6s_linear_infinite] animate-fade-up"
               style={{ animationDelay: "140ms" }}
@@ -109,9 +112,9 @@ export default function Home() {
               className="mt-4 text-slate-600 animate-fade-up"
               style={{ animationDelay: "200ms" }}
             >
-              Mealistik helps you plan, prep, and balance meals that support hormonal
-              health, one week at a time. Science-backed nutrition tailored to
-              your unique cycle and goals.
+              Mealistik helps you plan, prep, and balance meals that support
+              hormonal health, one week at a time. Science-backed nutrition
+              tailored to your unique cycle and goals.
             </p>
             <div
               className="mt-8 flex items-center justify-center md:justify-start gap-3 animate-fade-up"
@@ -122,7 +125,7 @@ export default function Home() {
                 className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold shadow-sm transition-transform hover:-translate-y-0.5 hover:brightness-90"
                 style={{ backgroundColor: "#2E1A47", color: "#FFFFFF" }}
               >
-                Download the App 
+                Download the App
                 <span className="ml-2">➜</span>
               </a>
               <a
@@ -143,19 +146,32 @@ export default function Home() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="relative w-48 sm:w-56 md:w-72 lg:w-80 aspect-square"
             >
-        <Image
+              <Image
                 src="/icons/hippo-scooter.png"
                 alt="Hippo on a scooter illustration"
                 fill
                 className="object-contain drop-shadow-xl"
-          priority
+                priority
                 quality={90}
               />
             </motion.div>
           </div>
         </div>
-     </section>
-
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            className="w-full h-32 text-white"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              fillOpacity="1"
+              d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+      </section>
       {/* About */}
       <section
         id="about"
@@ -223,17 +239,16 @@ export default function Home() {
   <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mb-12" />
   <div className="grid sm:grid-cols-3 gap-10 text-center">
     {[
-      { title: "Free", subtitle: "7 day trial", icon: "/icons/hippo-gift.png" },
-      { title: "24 hr", subtitle: "Set up Support", icon: "/icons/hippo-clock.png" },
-      { title: "2x", subtitle: "Energy Increase", icon: "/icons/hippo-speed.png" },
+      { title: "Free", subtitle: "7 day trial", icon: "/icons/hippo-gift.png", size: 112 },
+      { title: "24 hr", subtitle: "Set up Support", icon: "/icons/hippo-clock.png", size: 96 },
+      { title: "2x", subtitle: "Energy Increase", icon: "/icons/hippo-speed.png", size: 112 },
     ].map((item) => (
       <div key={item.title} className="flex flex-col items-center">
-        {/* Direct Image without circle */}
         <Image
           src={item.icon}
           alt={item.title}
-          width={96}   // bigger size (adjust as needed)
-          height={96}
+          width={item.size}   
+          height={item.size}
           className="object-contain"
         />
         <div className="mt-6 text-xl sm:text-3xl font-bold text-slate-900">
@@ -243,6 +258,7 @@ export default function Home() {
       </div>
     ))}
   </div>
+       <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mb-12" />
 </section>
 
      {/* Features */}

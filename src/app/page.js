@@ -159,7 +159,7 @@ export default function Home() {
       {/* About */}
       <section
         id="about"
-        className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-12 sm:py-16"
+        className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20"
       >
         <div className="grid md:grid-cols-2 gap-6 items-center">
           <motion.div
@@ -340,19 +340,6 @@ export default function Home() {
             </div>
           ))}
         </div>
-            <div className="absolute bottom-0 left-0 right-0">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1440 320"
-    className="w-full h-[60px] rotate-180"
-    preserveAspectRatio="none"
-  >
-    <path
-      fill="#FFFFFF"  // next section background color
-      d="M0,96L48,101.3C96,107,192,117,288,133.3C384,149,480,171,576,181.3C672,192,768,192,864,170.7C960,149,1056,107,1152,90.7C1248,75,1344,85,1392,90.7L1440,96L1440,0L0,0Z"
-    />
-  </svg>
-</div> 
       </section>
 
       {/* Timeline */}
@@ -499,32 +486,11 @@ export default function Home() {
               <label className="text-sm font-medium text-slate-700">Email</label>
               <input type="email" className="mt-1 w-full rounded-xl border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[color:var(--innara-primary)]/30" placeholder="you@example.com" />
             </div>
-            <div>
-              <label className="text-sm font-medium text-slate-700">I&apos;m interested in</label>
-              <select className="mt-1 w-full rounded-xl border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[color:var(--innara-primary)]/30">
-                <option>Meal Planning</option>
-                <option>Nutrition Guides</option>
-                <option>Community</option>
-              </select>
-            </div>
             <div className="pt-2">
               <button className="inline-flex items-center justify-center rounded-2xl bg-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:brightness-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--innara-primary)]/40 w-full md:w-auto">Join Innara Community</button>
             </div>
           </form>
         </div>
-                <div className="absolute bottom-0 left-0 right-0">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1440 320"
-    className="w-full h-[60px] rotate-180"
-    preserveAspectRatio="none"
-  >
-    <path
-      fill="#FFFFFF"  // next section background color
-      d="M0,96L48,101.3C96,107,192,117,288,133.3C384,149,480,171,576,181.3C672,192,768,192,864,170.7C960,149,1056,107,1152,90.7C1248,75,1344,85,1392,90.7L1440,96L1440,0L0,0Z"
-    />
-  </svg>
-</div> 
       </section>
 
       {/* Footer */}

@@ -278,6 +278,27 @@ export default function Home() {
 
       {/* Features */}
       <section id="features" className="relative bg-white px-6 lg:px-12 py-20 bg-gradient-to-l from-white to-[#CCCCFF]">
+        {/* Wave at top (flipped from Features) */}
+        <div className="absolute top-0 left-0 right-0 -translate-y-full rotate-180">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            className="w-full h-20 text-[#ECECFF]"
+            preserveAspectRatio="none"
+          >
+          <defs>
+      <linearGradient id="waveGradientTop" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#CCCCFF" />
+        <stop offset="100%" stopColor="#FFFFFF" />
+      </linearGradient>
+    </defs>
+    <path
+      fill="url(#waveGradientTop)"
+      d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,0L0,0Z"
+    />
+  </svg>
+            
+        </div>
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-semibold">
             Features that support your journey
@@ -355,20 +376,27 @@ export default function Home() {
           ))}
         </div>
         {/* Wave divider at bottom (into Contact bg) */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-            className="w-full h-32 text-[#ECECFF]"
-            preserveAspectRatio="none"
-          >
-            <path
-              fill="currentColor"
-              d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L0,320Z"
-            />
-          </svg>
-        </div>
-      </section>
+        
+<div className="absolute bottom-0 left-0 right-0 rotate-180">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+    className="w-full h-32"
+    preserveAspectRatio="none"
+  >
+    <defs>
+      <linearGradient id="waveGradientBottom" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#FFFFFF" />
+        <stop offset="100%" stopColor="#CCCCFF" />
+      </linearGradient>
+    </defs>
+    <path
+      fill="url(#waveGradientBottom)"
+      d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L0,320Z"
+    />
+  </svg>
+</div>
+
 
       {/* Timeline */}
       <section
@@ -464,14 +492,21 @@ export default function Home() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 320"
-            className="w-full h-32 text-[#ECECFF]"
+            className="w-full h-20 text-[#ECECFF]"
             preserveAspectRatio="none"
           >
-            <path
-              fill="currentColor"
-              d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,0L0,0Z"
-            />
-          </svg>
+          <defs>
+      <linearGradient id="waveGradientTop" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#CCCCFF" />
+        <stop offset="100%" stopColor="#FFFFFF" />
+      </linearGradient>
+    </defs>
+    <path
+      fill="url(#waveGradientTop)"
+      d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,0L0,0Z"
+    />
+  </svg>
+            
         </div>
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">Join the Mealistik Community</h2>
@@ -526,20 +561,6 @@ export default function Home() {
               <button className="inline-flex items-center justify-center rounded-2xl bg-[var(--innara-primary)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:brightness-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--innara-primary)]/40 w-full md:w-auto">Join Innara Community</button>
             </div>
           </form>
-        </div>
-        {/* Wave divider at bottom (into footer bg) */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-            className="w-full h-32 text-[#2E1A47]"
-            preserveAspectRatio="none"
-          >
-            <path
-              fill="currentColor"
-              d="M0,64L48,80C96,96,192,128,288,149.3C384,171,480,181,576,176C672,171,768,149,864,154.7C960,160,1056,192,1152,213.3C1248,235,1344,245,1392,250.7L1440,256V320H0Z"
-            />
-          </svg>
         </div>
       </section>
 

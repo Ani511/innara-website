@@ -172,7 +172,7 @@ export default function Home() {
       {/* About */}
       <section
         id="about"
-        className="mx-auto w-full max-w-7xl p-[30px] sm:px-[50px] lg:px-[60px] py-16 sm:py-20"
+        className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20"
       >
         <div className="grid md:grid-cols-2 gap-6 items-center">
           <motion.div

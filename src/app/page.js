@@ -256,7 +256,14 @@ export default function Home() {
       </div>
     ))}
   </div>
-  <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mt-12" />
+</section>
+
+      {/* Features */}
+      <section
+        id="features"
+        className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20 bg-gradient-to-l from-[#FFFFFF] to-[#CCCCFF]"
+      >
+          <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mt-12" />
       <div className="absolute bottom-0 left-0 right-0">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -270,13 +277,6 @@ export default function Home() {
     />
   </svg>
 </div>
-</section>
-
-      {/* Features */}
-      <section
-        id="features"
-        className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20 bg-gradient-to-l from-[#FFFFFF] to-[#CCCCFF]"
-      >
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-semibold">
             Features that support your journey

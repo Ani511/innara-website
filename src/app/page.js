@@ -156,15 +156,21 @@ export default function Home() {
       {/* Stats / Metrics */}
       <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-white">
         {/* Wave at top (inside section) */}
-  <div className="w-full overflow-hidden leading-none">
+        <div className="absolute -top-[1px] left-0 right-0 overflow-hidden leading-none">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 320"
-      className="w-full h-[200px] rotate-180"
+      className="w-full h-[180px] rotate-180"
       preserveAspectRatio="none"
     >
+      <defs>
+        <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#FFFFFF" />
+          <stop offset="100%" stopColor="#CCCCFF" />
+        </linearGradient>
+      </defs>
       <path
-        fill="#ffffff"   // 👈 same as this section's bg (white here)
+        fill="url(#waveGradient)" 
         d="M0,192L60,186.7C120,181,240,171,360,170.7C480,171,600,181,720,197.3C840,213,960,235,1080,234.7C1200,235,1320,213,1380,202.7L1440,192L1440,0L0,0Z"
       />
     </svg>

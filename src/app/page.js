@@ -91,11 +91,14 @@ export default function Home() {
           {/* Text column */}
           <div className="text-center md:text-left max-w-3xl md:max-w-xl mx-auto md:mx-0">
             <p
-              className="inline-block text-xs tracking-wide uppercase text-[#2E1A47] bg-[var(--innara-surface)] rounded-full px-3 py-1 mb-5 animate-fade-up border border-[var(--innara-primary)]"
-              style={{ animationDelay: "80ms" }}
-            >
-              New: Hormone-Smart Meal Planning App
-            </p>
+  className="inline-block text-xs tracking-wide uppercase text-[#2E1A47] bg-[var(--innara-surface)] rounded-full px-3 py-1 mb-5 animate-fade-up border border-[var(--innara-primary)]"
+  style={{ animationDelay: "80ms" }}
+>
+  <span className="bg-[#7A69AF] text-white px-2 py-0.5 rounded-full mr-1">
+    New
+  </span>
+  : Hormone-Smart Meal Planning App
+</p>
             <h1
               className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-[linear-gradient(90deg,#7A69AF,#9B8BD1,#7A69AF)] bg-[length:200%_100%] animate-[shine_6s_linear_infinite] animate-fade-up"
               style={{ animationDelay: "140ms" }}
@@ -159,9 +162,9 @@ export default function Home() {
     preserveAspectRatio="none"
   >
     <path
-      fill="#FFFFFF"  // next section background color
-      d="M0,96L48,101.3C96,107,192,117,288,133.3C384,149,480,171,576,181.3C672,192,768,192,864,170.7C960,149,1056,107,1152,90.7C1248,75,1344,85,1392,90.7L1440,96L1440,0L0,0Z"
-    />
+  fill="#FFFFFF"
+  d="M0,160C180,280,360,40,540,160C720,280,900,40,1080,160C1260,280,1440,40,1440,40L1440,0L0,0Z"
+/>
   </svg>
 </div>
      </section>

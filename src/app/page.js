@@ -245,14 +245,9 @@ export default function Home() {
   </div>
 </section>
 
-      {/* Features */}
-      <section
-        id="features"
-        className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20 bg-gradient-to-l from-[#FFFFFF] to-[#CCCCFF]"
-      >
-          <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mt-12" />
-</div>
-        <div className="text-center max-w-2xl mx-auto">
+     {/* Features */}
+      <section id="features" className="relative bg-white px-6 lg:px-12 py-20 bg-gradient-to-l from-white to-[#CCCCFF]">
+        <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-semibold">
             Features that support your journey
           </h2>
@@ -328,8 +323,21 @@ export default function Home() {
             </div>
           ))}
         </div>
+        {/* Wave divider at bottom (into Contact bg) */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            className="w-full h-32 text-[#ECECFF]"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,256C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L0,320Z"
+            />
+          </svg>
+        </div>
       </section>
-
       {/* Timeline */}
       <section
         id="plans"

@@ -154,19 +154,6 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1440 320"
-    className="w-full h-[60px] rotate-180"
-    preserveAspectRatio="none"
-  >
-    <path
-  fill="#FFFFFF"
-  d="M0,160C180,280,360,40,540,160C720,280,900,40,1080,160C1260,280,1440,40,1440,40L1440,0L0,0Z"
-/>
-  </svg>
-</div>
      </section>
 
       {/* About */}

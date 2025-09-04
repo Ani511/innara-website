@@ -251,18 +251,6 @@ export default function Home() {
         className="mx-auto w-full max-w-7xl p-[40px] sm:px-[60px] lg:px-[75px] py-16 sm:py-20 bg-gradient-to-l from-[#FFFFFF] to-[#CCCCFF]"
       >
           <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mt-12" />
-      <div className="absolute bottom-0 left-0 right-0">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1440 320"
-    className="w-full h-[60px]"
-    preserveAspectRatio="none"
-  >
-    <path
-      fill="#FFFFFF"  // next section background color
-      d="M0,96L48,101.3C96,107,192,117,288,133.3C384,149,480,171,576,181.3C672,192,768,192,864,170.7C960,149,1056,107,1152,90.7C1248,75,1344,85,1392,90.7L1440,96L1440,0L0,0Z"
-    />
-  </svg>
 </div>
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-semibold">

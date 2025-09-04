@@ -153,34 +153,6 @@ export default function Home() {
         </div>
      </section>
 
-      {/* Stats / Metrics */}
-      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-white">
-  <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mb-12" />
-  <div className="grid sm:grid-cols-3 gap-10 text-center">
-    {[
-      { title: "Free", subtitle: "7 day trial", icon: "/icons/hippo-gift.png" },
-      { title: "24 hr", subtitle: "Set up Support", icon: "/icons/hippo-clock.png" },
-      { title: "2x", subtitle: "Energy Increase", icon: "/icons/hippo-speed.png" },
-    ].map((item) => (
-      <div key={item.title} className="flex flex-col items-center">
-        {/* Direct Image without circle */}
-        <Image
-          src={item.icon}
-          alt={item.title}
-          width={96}   // bigger size (adjust as needed)
-          height={96}
-          className="object-contain"
-        />
-        <div className="mt-6 text-xl sm:text-3xl font-bold text-slate-900">
-          {item.title}
-        </div>
-        <div className="mt-2 text-base text-slate-700">{item.subtitle}</div>
-      </div>
-    ))}
-  </div>
-  <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mt-12" />
-</section>
-
       {/* About */}
       <section
         id="about"
@@ -242,6 +214,34 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+           {/* Stats / Metrics */}
+      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-white">
+  <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mb-12" />
+  <div className="grid sm:grid-cols-3 gap-10 text-center">
+    {[
+      { title: "Free", subtitle: "7 day trial", icon: "/icons/hippo-gift.png" },
+      { title: "24 hr", subtitle: "Set up Support", icon: "/icons/hippo-clock.png" },
+      { title: "2x", subtitle: "Energy Increase", icon: "/icons/hippo-speed.png" },
+    ].map((item) => (
+      <div key={item.title} className="flex flex-col items-center">
+        {/* Direct Image without circle */}
+        <Image
+          src={item.icon}
+          alt={item.title}
+          width={96}   // bigger size (adjust as needed)
+          height={96}
+          className="object-contain"
+        />
+        <div className="mt-6 text-xl sm:text-3xl font-bold text-slate-900">
+          {item.title}
+        </div>
+        <div className="mt-2 text-base text-slate-700">{item.subtitle}</div>
+      </div>
+    ))}
+  </div>
+  <div className="h-0.5 w-full bg-[var(--innara-primary)]/50 mt-12" />
+</section>
 
       {/* Features */}
       <section
